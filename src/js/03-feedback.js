@@ -3,7 +3,7 @@ import storage from './storage.js';
 
 const LOCAL_KEY = 'feedback-form-state';
 
-formInput = document.querySelector('.feedback-form');
+formInput=document.querySelector('.feedback-form');
 
 formInput.addEventListener('input', throttle(onInputData, 500));
 formInput.addEventListener('submit', onFormSubmit);
