@@ -3,14 +3,14 @@ import storage from './storage.js';
 
 const LOCAL_KEY = 'feedback-form-state';
 
-form = document.querySelector('.feedback-form');
+formInput = document.querySelector('.feedback-form');
 
-form.addEventListener('input', throttle(onInputData, 500));
-form.addEventListener('submit', onFormSubmit);
+formInput.addEventListener('input', throttle(onInputData, 500));
+formInput.addEventListener('submit', onFormSubmit);
 
 let dataForm = storage.load(LOCAL_KEY)
 
-const { email, message } = form.elements;
+const { email, message } = formInput.elements;
 reloadPage();
 
 function onInputData() {
