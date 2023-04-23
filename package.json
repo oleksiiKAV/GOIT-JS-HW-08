@@ -11,8 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/oleksiiKAV/GOIT-JS-HW-08"
   },
- 
   "dependencies": {
+    "@vimeo/player": "^2.19.0",
+    "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.13.0"
   },

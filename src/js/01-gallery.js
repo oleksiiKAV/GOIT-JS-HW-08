@@ -1,5 +1,6 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
+import storage from './storage.js';
 // Change code below this line
 // Описан в документации
 import SimpleLightbox from "simplelightbox";
@@ -78,6 +79,13 @@ galleryBox.options.caption = true;
 galleryBox.options.captionDelay = 250
 galleryBox.options.captionsData = "alt"
 // galleryBox.refresh()
+const CURRENT_IMG = 'currentImageIndex'
+galleryBox.on('changed.simplelightbox', () => {
+    console.log(galleryBox.currentImageIndex);
+    storage.save(CURRENT_IMG, galleryBox.currentImageIndex)
+}
+)
+
 console.log(galleryBox)
 
     // gallery.next(); // Next Image
